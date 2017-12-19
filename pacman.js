@@ -8,7 +8,7 @@ var inky = {
   color: 'Red',
   character: 'Shadow',
   edible: 'false'
-}
+};
 
 var blinky = {
   menu_option: '2',
@@ -16,7 +16,7 @@ var blinky = {
   color: 'Cyan',
   character: 'Speedy',
   edible: 'false'
-}
+};
 
 var pinky = {
   menu_option: '3',
@@ -24,7 +24,7 @@ var pinky = {
   color: 'Pink',
   character: 'Bashful',
   edible: 'false'
-}
+};
 
 var clyde = {
   menu_option: '4',
@@ -32,7 +32,9 @@ var clyde = {
   color: 'Orange',
   character: 'Pokey',
   edible: 'false'
-}
+};
+
+var ghosts = [inky, blinky, pinky, clyde];
 
 // Define your ghosts here
 
@@ -60,6 +62,10 @@ function displayStats() {
 function displayMenu() {
   console.log('\n\nSelect Option:\n');  // each \n creates a new line
   console.log('(d) Eat Dot');
+  console.log('(1) Eat Inky');
+  console.log('(2) Eat Blinky');
+  console.log('(3) Eat Pinky');
+  console.log('(4) Eat Clyde');
   console.log('(q) Quit');
 }
 
