@@ -1,6 +1,7 @@
 // Setup initial game stats
 var score = 0;
 var lives = 2;
+var power_pellets = 4;
 
 var inky = {
   menu_option: '1',
@@ -56,7 +57,7 @@ function clearScreen() {
 }
 
 function displayStats() {
-  console.log('Score: ' + score + '     Lives: ' + lives);
+  console.log('Score: ' + score + '     Lives: ' + lives + '    Power-Pellets: ' + power_pellets);
 }
 
 function displayMenu() {
@@ -97,6 +98,19 @@ function processInput(key) {
   }
 }
 
+// Process Eating an Inedible Ghost
+function eatGhost(ghost) {
+  if (ghost['edible'] == false) {
+    console.log('\nYou were killed by', ghost['name'], 'the', ghost['color'], 'ghost.');
+    lives += 1;
+  }
+}
+
+function gameOver() {
+  if (lives == 0) {
+    process.exit()
+  }
+}
 
 //
 // YOU PROBABLY DON'T WANT TO CHANGE CODE BELOW THIS LINE
