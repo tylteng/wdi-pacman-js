@@ -2,6 +2,37 @@
 var score = 0;
 var lives = 2;
 
+var inky = {
+  menu_option: '1',
+  name: 'Inky',
+  color: 'Red',
+  character: 'Shadow',
+  edible: 'false'
+}
+
+var blinky = {
+  menu_option: '2',
+  name: 'Blinky',
+  color: 'Cyan',
+  character: 'Speedy',
+  edible: 'false'
+}
+
+var pinky = {
+  menu_option: '3',
+  name: 'Pinky',
+  color: 'Pink',
+  character: 'Bashful',
+  edible: 'false'
+}
+
+var clyde = {
+  menu_option: '4',
+  name: 'Clyde',
+  color: 'Orange',
+  character: 'Pokey',
+  edible: 'false'
+}
 
 // Define your ghosts here
 
@@ -78,7 +109,7 @@ drawScreen();
 stdin.on('data', function(key) {
   process.stdout.write(key);
   processInput(key);
-  setTimeout(drawScreen, 300); // The command prompt will flash a message for 300 milliseoncds before it re-draws the screen. You can adjust the 300 number to increase this.
+  setTimeout(drawScreen, 500); // The command prompt will flash a message for 300 milliseoncds before it re-draws the screen. You can adjust the 300 number to increase this.
 });
 
 // Player Quits
